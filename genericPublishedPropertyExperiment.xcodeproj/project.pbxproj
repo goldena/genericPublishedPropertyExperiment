@@ -12,9 +12,9 @@
 		CF57990728E8C56F00472712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF57990628E8C56F00472712 /* Assets.xcassets */; };
 		CF57990A28E8C56F00472712 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF57990928E8C56F00472712 /* Preview Assets.xcassets */; };
 		CF57991128E8C68100472712 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF57991028E8C68100472712 /* ViewModel.swift */; };
-		CF57991328E8C69600472712 /* ValuePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF57991228E8C69600472712 /* ValuePublisher.swift */; };
 		CF57991528E8C91A00472712 /* IntViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF57991428E8C91A00472712 /* IntViewModel.swift */; };
 		CF57991728E8CB0300472712 /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF57991628E8CB0300472712 /* TimerService.swift */; };
+		CF57991C28E8FF0900472712 /* ValuePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF57991B28E8FF0900472712 /* ValuePublisher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,9 +24,9 @@
 		CF57990628E8C56F00472712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF57990928E8C56F00472712 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CF57991028E8C68100472712 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		CF57991228E8C69600472712 /* ValuePublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuePublisher.swift; sourceTree = "<group>"; };
 		CF57991428E8C91A00472712 /* IntViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntViewModel.swift; sourceTree = "<group>"; };
 		CF57991628E8CB0300472712 /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
+		CF57991B28E8FF0900472712 /* ValuePublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuePublisher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +63,7 @@
 				CF57990428E8C56C00472712 /* ContentView.swift */,
 				CF57991428E8C91A00472712 /* IntViewModel.swift */,
 				CF57991028E8C68100472712 /* ViewModel.swift */,
-				CF57991228E8C69600472712 /* ValuePublisher.swift */,
+				CF57991B28E8FF0900472712 /* ValuePublisher.swift */,
 				CF57991628E8CB0300472712 /* TimerService.swift */,
 				CF57990628E8C56F00472712 /* Assets.xcassets */,
 				CF57990828E8C56F00472712 /* Preview Content */,
@@ -151,9 +151,9 @@
 			files = (
 				CF57991528E8C91A00472712 /* IntViewModel.swift in Sources */,
 				CF57990528E8C56C00472712 /* ContentView.swift in Sources */,
+				CF57991C28E8FF0900472712 /* ValuePublisher.swift in Sources */,
 				CF57991128E8C68100472712 /* ViewModel.swift in Sources */,
 				CF57991728E8CB0300472712 /* TimerService.swift in Sources */,
-				CF57991328E8C69600472712 /* ValuePublisher.swift in Sources */,
 				CF57990328E8C56C00472712 /* genericPublishedPropertyExperimentApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,19 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var viewModel: IntViewModel
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Spacer()
+            
+            Text("Generic @Published property experiment")
+            
+            Spacer()
+            
+            if let int = viewModel.value {
+                Text("int = \(int)")
+            } else {
+                Text("int = nil")
+            }
+            
+            Spacer()
         }
+        .font(.title)
         .padding()
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+    
 }

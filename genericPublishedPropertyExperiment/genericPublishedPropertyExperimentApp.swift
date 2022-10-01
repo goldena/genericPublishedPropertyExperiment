@@ -7,11 +7,12 @@
 
 import SwiftUI
 
-@main
-struct genericPublishedPropertyExperimentApp: App {
+@main struct genericPublishedPropertyExperimentApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: IntViewModel())
         }
     }
+    
 }

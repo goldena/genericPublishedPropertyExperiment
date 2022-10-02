@@ -11,32 +11,47 @@ final class TimerService: Service<Int?> {
         
     // MARK: - Properties
 
-    private(set) var totalSeconds: Int?
-
     private var timer: Timer?
 
     // MARK: - Reset Service
 
-    override func resetService() {
-        totalSeconds = nil
+    override func onDeinit() {
+        stop()
         
-        super.resetService()
+        super.onDeinit()
     }
 
+    override func handle(action: AppAction) {        
+        guard case .timer(let timerAction) = action else {
+            print("\(self) cannot handle \(action)")
+            return
+        }
+        
+        switch timerAction {
+        case .set(let seconds):
+            set(seconds: seconds)
+            
+        case .start:
+            start()
+            
+        case .stop:
+            stop()
+        }
+    }
+    
 }
 
 // MARK: - TimerService protocol
 
 extension TimerService {
 
-    func setTimer(seconds: Int) {
+    private func set(seconds: Int) {
         assert(seconds > 0, "Trying to set timer on zero or negative value")
 
-        totalSeconds = seconds
-        publish(seconds)
+        publish(value: seconds)
     }
 
-    func start() {
+    private func start() {
         guard timer == nil else {
             print("Timer already started")
             return
@@ -53,29 +68,18 @@ extension TimerService {
 
                 if let value = self.value {
                     if value > 0 {
-                        self.publish(value - 1)
+                        self.publish(value: value - 1)
                     } else {
                         self.stop()
                     }
                 }
-
-                self.publish(self.value)
             }
         )
     }
 
-    func stop() {
+    private func stop() {
         timer?.invalidate()
         timer = nil
-    }
-
-    func reset() {
-        guard let totalSeconds else {
-            print("Timer is not set to be reset")
-            return
-        }
-
-        setTimer(seconds: totalSeconds)
     }
 
 }

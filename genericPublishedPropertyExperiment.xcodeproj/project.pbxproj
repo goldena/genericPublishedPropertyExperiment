@@ -16,6 +16,13 @@
 		CF57991728E8CB0300472712 /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF57991628E8CB0300472712 /* TimerService.swift */; };
 		CF57991C28E8FF0900472712 /* ValuePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF57991B28E8FF0900472712 /* ValuePublisher.swift */; };
 		CF6D742D28E9C27300255508 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6D742C28E9C27300255508 /* Service.swift */; };
+		CFA828AF28E9DD5C004CBAA8 /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828AE28E9DD5C004CBAA8 /* AppAction.swift */; };
+		CFA828B328E9E78B004CBAA8 /* ActionPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828B228E9E78B004CBAA8 /* ActionPublisher.swift */; };
+		CFA828B528E9EB26004CBAA8 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828B428E9EB26004CBAA8 /* TimerView.swift */; };
+		CFA828B728EA30AF004CBAA8 /* LogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828B628EA30AF004CBAA8 /* LogService.swift */; };
+		CFA828B928EA4221004CBAA8 /* ViewModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828B828EA4221004CBAA8 /* ViewModelProvider.swift */; };
+		CFA828BB28EA49AE004CBAA8 /* TimerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828BA28EA49AE004CBAA8 /* TimerAction.swift */; };
+		CFA828BE28EA49EE004CBAA8 /* LogAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828BD28EA49EE004CBAA8 /* LogAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +36,13 @@
 		CF57991628E8CB0300472712 /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
 		CF57991B28E8FF0900472712 /* ValuePublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuePublisher.swift; sourceTree = "<group>"; };
 		CF6D742C28E9C27300255508 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		CFA828AE28E9DD5C004CBAA8 /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
+		CFA828B228E9E78B004CBAA8 /* ActionPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPublisher.swift; sourceTree = "<group>"; };
+		CFA828B428E9EB26004CBAA8 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		CFA828B628EA30AF004CBAA8 /* LogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogService.swift; sourceTree = "<group>"; };
+		CFA828B828EA4221004CBAA8 /* ViewModelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProvider.swift; sourceTree = "<group>"; };
+		CFA828BA28EA49AE004CBAA8 /* TimerAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAction.swift; sourceTree = "<group>"; };
+		CFA828BD28EA49EE004CBAA8 /* LogAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,11 +77,9 @@
 			children = (
 				CF57990228E8C56C00472712 /* genericPublishedPropertyExperimentApp.swift */,
 				CF57990428E8C56C00472712 /* ContentView.swift */,
-				CF57991428E8C91A00472712 /* TimerViewModel.swift */,
-				CF57991028E8C68100472712 /* ViewModel.swift */,
-				CF6D742C28E9C27300255508 /* Service.swift */,
-				CF57991B28E8FF0900472712 /* ValuePublisher.swift */,
-				CF57991628E8CB0300472712 /* TimerService.swift */,
+				CFA828B428E9EB26004CBAA8 /* TimerView.swift */,
+				CFA828AD28E9DC20004CBAA8 /* ViewModels */,
+				CFA828AC28E9DBFB004CBAA8 /* Services */,
 				CF57990628E8C56F00472712 /* Assets.xcassets */,
 				CF57990828E8C56F00472712 /* Preview Content */,
 			);
@@ -80,6 +92,55 @@
 				CF57990928E8C56F00472712 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CFA828AC28E9DBFB004CBAA8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CF57991B28E8FF0900472712 /* ValuePublisher.swift */,
+				CF6D742C28E9C27300255508 /* Service.swift */,
+				CFA828C028EA4A16004CBAA8 /* Navigation Service */,
+				CFA828BC28EA49BD004CBAA8 /* Timer Service */,
+				CFA828BF28EA49FB004CBAA8 /* Log Service */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CFA828AD28E9DC20004CBAA8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CFA828AE28E9DD5C004CBAA8 /* AppAction.swift */,
+				CFA828B228E9E78B004CBAA8 /* ActionPublisher.swift */,
+				CF57991028E8C68100472712 /* ViewModel.swift */,
+				CF57991428E8C91A00472712 /* TimerViewModel.swift */,
+				CFA828B828EA4221004CBAA8 /* ViewModelProvider.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CFA828BC28EA49BD004CBAA8 /* Timer Service */ = {
+			isa = PBXGroup;
+			children = (
+				CFA828BA28EA49AE004CBAA8 /* TimerAction.swift */,
+				CF57991628E8CB0300472712 /* TimerService.swift */,
+			);
+			path = "Timer Service";
+			sourceTree = "<group>";
+		};
+		CFA828BF28EA49FB004CBAA8 /* Log Service */ = {
+			isa = PBXGroup;
+			children = (
+				CFA828BD28EA49EE004CBAA8 /* LogAction.swift */,
+				CFA828B628EA30AF004CBAA8 /* LogService.swift */,
+			);
+			path = "Log Service";
+			sourceTree = "<group>";
+		};
+		CFA828C028EA4A16004CBAA8 /* Navigation Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Navigation Service";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,11 +213,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFA828B528E9EB26004CBAA8 /* TimerView.swift in Sources */,
+				CFA828B928EA4221004CBAA8 /* ViewModelProvider.swift in Sources */,
+				CFA828B728EA30AF004CBAA8 /* LogService.swift in Sources */,
+				CFA828AF28E9DD5C004CBAA8 /* AppAction.swift in Sources */,
+				CFA828BE28EA49EE004CBAA8 /* LogAction.swift in Sources */,
 				CF57991528E8C91A00472712 /* TimerViewModel.swift in Sources */,
 				CF6D742D28E9C27300255508 /* Service.swift in Sources */,
+				CFA828BB28EA49AE004CBAA8 /* TimerAction.swift in Sources */,
 				CF57990528E8C56C00472712 /* ContentView.swift in Sources */,
 				CF57991C28E8FF0900472712 /* ValuePublisher.swift in Sources */,
 				CF57991128E8C68100472712 /* ViewModel.swift in Sources */,
+				CFA828B328E9E78B004CBAA8 /* ActionPublisher.swift in Sources */,
 				CF57991728E8CB0300472712 /* TimerService.swift in Sources */,
 				CF57990328E8C56C00472712 /* genericPublishedPropertyExperimentApp.swift in Sources */,
 			);

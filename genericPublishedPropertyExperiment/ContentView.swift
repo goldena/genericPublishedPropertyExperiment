@@ -8,27 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+             
+    let viewModelProvider: ViewModelProvider
+    @State private var anotherScreen = false
     
-    @StateObject var viewModel: TimerViewModel
-        
     var body: some View {
-        VStack {
-            Spacer()
-            
-            Text("Generic @Published property experiment")
-            
-            Spacer()
-            
-            if let int = viewModel.timerValue {
-                Text("int = \(int)")
-            } else {
-                Text("int = nil")
+        if anotherScreen {
+            VStack {
+                Button("Go to another screen") {
+                    anotherScreen.toggle()
+                }
+                
+                Spacer()
+                
+                Text("Another screen")
+                
+                Spacer()
             }
-            
-            Spacer()
+            .font(.title)
+        } else {
+            TimerView(
+                viewModel: viewModelProvider.timerViewModel(),
+                anotherScreen: $anotherScreen
+            )
         }
-        .font(.title)
-        .padding()
     }
     
 }

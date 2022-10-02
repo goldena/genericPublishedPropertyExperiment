@@ -14,4 +14,6 @@ protocol ValuePublisher: AnyObject {
     var value: T { get }
     var valuePublisher: Published<T>.Publisher { get }
 
+    func publish(value: T)
+    
 }

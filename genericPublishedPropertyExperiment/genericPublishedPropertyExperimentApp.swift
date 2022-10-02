@@ -11,7 +11,7 @@ import SwiftUI
     
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: IntViewModel())
+            ContentView(viewModel: TimerViewModel.getViewModel())
         }
     }
     

@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class TimerService: ViewModel<Int?> {
+final class TimerService: Service<Int?> {
         
     // MARK: - Properties
 
@@ -17,9 +17,10 @@ final class TimerService: ViewModel<Int?> {
 
     // MARK: - Reset Service
 
-    func resetService() {
+    override func resetService() {
         totalSeconds = nil
-        publish(nil)
+        
+        super.resetService()
     }
 
 }

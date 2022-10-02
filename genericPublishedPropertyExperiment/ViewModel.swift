@@ -8,18 +8,13 @@
 import Foundation
 import Combine
 
-@MainActor class ViewModel<T: Sendable>: ObservableObject {
-     
-    @Published private(set) var value: T
-    
+@MainActor class ViewModel: ObservableObject {
+         
     private var subscriptions: Set<AnyCancellable> = []
 
-    init(initialPublishedValue: T) {
-        self.value = initialPublishedValue
-    }
-    
-    func relay(
-        of publisher: Published<T>.Publisher
+    func relay<T: Sendable>(
+        publisher: Published<T>.Publisher,
+        _ action: @escaping (T) -> Void
     ) {
         publisher
             .receive(on: DispatchQueue.main)
@@ -29,33 +24,21 @@ import Combine
                 },
 
                 receiveValue: { [weak self] publishedValue in
-                    guard let self = self else {
+                    guard let self else {
                         return
                     }
 
                     print("\(self) received new value \(publishedValue)")
-                    self.publish(publishedValue)
+                    action(publishedValue)
                 }
             )
             .store(in: &subscriptions)
     }
     
-    func publish(_ value: T) {
-        self.value = value
-    }
-
     #if DEBUG
     deinit {
         print("\(self) deinitialized")
     }
     #endif
 
-}
-
-extension ViewModel: ValuePublisher {
-
-    var valuePublisher: Published<T>.Publisher {
-        $value
-    }
-    
 }

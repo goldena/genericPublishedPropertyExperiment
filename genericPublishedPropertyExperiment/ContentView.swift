@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @StateObject var viewModel: IntViewModel
+    @StateObject var viewModel: TimerViewModel
         
     var body: some View {
         VStack {
@@ -19,7 +19,7 @@ struct ContentView: View {
             
             Spacer()
             
-            if let int = viewModel.value {
+            if let int = viewModel.timerValue {
                 Text("int = \(int)")
             } else {
                 Text("int = nil")

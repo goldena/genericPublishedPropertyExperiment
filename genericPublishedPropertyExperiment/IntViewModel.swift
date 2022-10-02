@@ -9,10 +9,10 @@ import Foundation
 
 final class IntViewModel: ViewModel<Int?> {
         
-    private let timerService = TimerService(initialValue: nil)
+    private let timerService = TimerService(initialPublishedValue: nil)
     
     init() {
-        super.init(initialValue: nil)
+        super.init(initialPublishedValue: nil)
         
         self.relay(of: timerService.valuePublisher)
         

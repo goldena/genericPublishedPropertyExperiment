@@ -14,8 +14,8 @@ import Combine
     
     private var subscriptions: Set<AnyCancellable> = []
 
-    init(initialValue: T) {
-        self.value = initialValue
+    init(initialPublishedValue: T) {
+        self.value = initialPublishedValue
     }
     
     func relay(

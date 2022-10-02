@@ -7,11 +7,8 @@
 
 import Foundation
 
-final class TimerService: ValuePublisher {
-    
-    @Published var value: Int?
-    var valuePublisher: Published<Int?>.Publisher { $value }
-    
+final class TimerService: ViewModel<Int?> {
+        
     // MARK: - Properties
 
     private(set) var totalSeconds: Int?
@@ -55,7 +52,7 @@ extension TimerService {
 
                 if let value = self.value {
                     if value > 0 {
-                        self.value = value - 1
+                        self.publish(value - 1)
                     } else {
                         self.stop()
                     }

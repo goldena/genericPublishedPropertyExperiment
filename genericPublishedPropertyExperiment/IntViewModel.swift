@@ -7,29 +7,17 @@
 
 import Foundation
 
-final class IntViewModel: ViewModel {
-    
-    @Published var value: Int?
-    
-    private let timerService = TimerService()
-    
-    override init() {
-        super.init()
+final class IntViewModel: ViewModel<Int?> {
         
-        self.subscribe(to: timerService.valuePublisher) { [weak self] int in
-            self?.publish(int)
-        }
+    private let timerService = TimerService(initialValue: nil)
+    
+    init() {
+        super.init(initialValue: nil)
+        
+        self.relay(of: timerService.valuePublisher)
         
         timerService.setTimer(seconds: 30)
         timerService.start()
     }
     
-}
-
-extension IntViewModel: ValuePublisher {
-        
-    var valuePublisher: Published<Int?>.Publisher {
-        $value
-    }
-        
 }

@@ -11,17 +11,7 @@ protocol ValuePublisher: AnyObject {
     
     associatedtype T: Sendable
     
-    var value: T? { get set }
-    var valuePublisher: Published<T?>.Publisher { get }
-    
-    func publish(_ value: T?)
-    
-}
+    var value: T { get }
+    var valuePublisher: Published<T>.Publisher { get }
 
-extension ValuePublisher {
-        
-    func publish(_ value: T?) {
-        self.value = value
-    }
-    
 }

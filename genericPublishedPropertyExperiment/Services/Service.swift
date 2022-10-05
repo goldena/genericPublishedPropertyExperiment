@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class Service: ObservableObject, Resettable, ActionHandler {
+class Service: ObservableObject, ActionHandler, Resettable {
 
     // MARK: - DataPublisher protocol
     
@@ -52,12 +52,12 @@ class Service: ObservableObject, Resettable, ActionHandler {
     func onReset() {
         print("--> onReset() was not overridden in \(self)")
     }
-
+    
 }
 
 // MARK: - DataPublisher protocol
 
-extension Service: DataPublisher {    
+extension Service: DataPublisher {
     
     func publish(data: AppData?) {
         self.data = data

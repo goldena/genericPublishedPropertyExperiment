@@ -90,12 +90,10 @@
 			isa = PBXGroup;
 			children = (
 				CF57990228E8C56C00472712 /* ExperimentApp.swift */,
-				CFA828AE28E9DD5C004CBAA8 /* AppAction.swift */,
-				CFA828D128EE2593004CBAA8 /* AddData.swift */,
-				CFA828CA28ECDC47004CBAA8 /* Protocols */,
-				CFA828AD28E9DC20004CBAA8 /* ViewModel */,
+				CFA828DC28EE31E4004CBAA8 /* Root Action and Data enums */,
 				CFA828AC28E9DBFB004CBAA8 /* Services */,
-				CFA828C128ECC019004CBAA8 /* Views */,
+				CFA828AD28E9DC20004CBAA8 /* ViewModel */,
+				CFA828C128ECC019004CBAA8 /* Screens */,
 				CF57990628E8C56F00472712 /* Assets.xcassets */,
 				CF57990828E8C56F00472712 /* Preview Content */,
 			);
@@ -114,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				CF6D742C28E9C27300255508 /* Service.swift */,
-				CFA828C028EA4A16004CBAA8 /* Navigation Service */,
+				CFA828DA28EE3165004CBAA8 /* Protocols */,
 				CFA828BC28EA49BD004CBAA8 /* Timer Service */,
 				CFA828BF28EA49FB004CBAA8 /* Log Service */,
 			);
@@ -124,9 +122,9 @@
 		CFA828AD28E9DC20004CBAA8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				CFA828B828EA4221004CBAA8 /* ViewModelProvider.swift */,
 				CF57991028E8C68100472712 /* ViewModel.swift */,
-				CF57991428E8C91A00472712 /* TimerViewModel.swift */,
+				CFA828B828EA4221004CBAA8 /* ViewModelProvider.swift */,
+				CFA828D928EE3152004CBAA8 /* Protocols */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -151,33 +149,51 @@
 			path = "Log Service";
 			sourceTree = "<group>";
 		};
-		CFA828C028EA4A16004CBAA8 /* Navigation Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Navigation Service";
-			sourceTree = "<group>";
-		};
-		CFA828C128ECC019004CBAA8 /* Views */ = {
+		CFA828C128ECC019004CBAA8 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				CF57990428E8C56C00472712 /* ContentView.swift */,
-				CFA828B428E9EB26004CBAA8 /* TimerView.swift */,
+				CFA828DB28EE31A4004CBAA8 /* Timer Screen */,
 			);
-			path = Views;
+			path = Screens;
 			sourceTree = "<group>";
 		};
-		CFA828CA28ECDC47004CBAA8 /* Protocols */ = {
+		CFA828D928EE3152004CBAA8 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				CFA828C828ECDC18004CBAA8 /* Deinitable.swift */,
-				CFA828CD28ECDDE9004CBAA8 /* Resettable.swift */,
-				CFA828CB28ECDD6F004CBAA8 /* ActionHandler.swift */,
-				CFA828D528EE290A004CBAA8 /* DataHandler.swift */,
 				CFA828B228E9E78B004CBAA8 /* ActionPublisher.swift */,
+				CFA828C828ECDC18004CBAA8 /* Deinitable.swift */,
+				CFA828D528EE290A004CBAA8 /* DataHandler.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CFA828DA28EE3165004CBAA8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CFA828CB28ECDD6F004CBAA8 /* ActionHandler.swift */,
+				CFA828CD28ECDDE9004CBAA8 /* Resettable.swift */,
 				CFA828D728EE2943004CBAA8 /* DataPublisher.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CFA828DB28EE31A4004CBAA8 /* Timer Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CF57991428E8C91A00472712 /* TimerViewModel.swift */,
+				CFA828B428E9EB26004CBAA8 /* TimerView.swift */,
+			);
+			path = "Timer Screen";
+			sourceTree = "<group>";
+		};
+		CFA828DC28EE31E4004CBAA8 /* Root Action and Data enums */ = {
+			isa = PBXGroup;
+			children = (
+				CFA828AE28E9DD5C004CBAA8 /* AppAction.swift */,
+				CFA828D128EE2593004CBAA8 /* AddData.swift */,
+			);
+			path = "Root Action and Data enums";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

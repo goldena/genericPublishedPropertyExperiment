@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class ViewModel: ObservableObject, Deinitable, DataHandler {
+class ViewModel: ObservableObject, DataHandler, Deinitable {
 
     // MARK: - ActionPublisher protocol
 
@@ -26,7 +26,13 @@ class ViewModel: ObservableObject, Deinitable, DataHandler {
     ) {
         self.services = services
         
-        subscribeServices()
+        services.forEach { service in
+            // Subscribe Services to receive actions from ViewModel
+            service.subscribeToActions(from: $action)
+            
+            // Subscribe ViewModel to receive data from Services
+            self.subscribeToData(from: service.$data)
+        }
     }
 
     func subscribeToData(
@@ -48,14 +54,6 @@ class ViewModel: ObservableObject, Deinitable, DataHandler {
                 }
             )
             .store(in: &subscriptions)
-    }
-
-    private func subscribeServices() {
-        services.forEach { service in
-            service.subscribeToActions(from: $action)
-            
-            self.subscribeToData(from: service.$data)
-        }
     }
     
     // MARK: - DataHandler protocol

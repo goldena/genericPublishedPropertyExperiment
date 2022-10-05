@@ -14,7 +14,6 @@
 		CF57991128E8C68100472712 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF57991028E8C68100472712 /* ViewModel.swift */; };
 		CF57991528E8C91A00472712 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF57991428E8C91A00472712 /* TimerViewModel.swift */; };
 		CF57991728E8CB0300472712 /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF57991628E8CB0300472712 /* TimerService.swift */; };
-		CF57991C28E8FF0900472712 /* ValuePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF57991B28E8FF0900472712 /* ValuePublisher.swift */; };
 		CF6D742D28E9C27300255508 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6D742C28E9C27300255508 /* Service.swift */; };
 		CFA828AF28E9DD5C004CBAA8 /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828AE28E9DD5C004CBAA8 /* AppAction.swift */; };
 		CFA828B328E9E78B004CBAA8 /* ActionPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828B228E9E78B004CBAA8 /* ActionPublisher.swift */; };
@@ -23,6 +22,10 @@
 		CFA828B928EA4221004CBAA8 /* ViewModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828B828EA4221004CBAA8 /* ViewModelProvider.swift */; };
 		CFA828BB28EA49AE004CBAA8 /* TimerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828BA28EA49AE004CBAA8 /* TimerAction.swift */; };
 		CFA828BE28EA49EE004CBAA8 /* LogAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828BD28EA49EE004CBAA8 /* LogAction.swift */; };
+		CFA828C528ECC5EA004CBAA8 /* ReactiveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828C428ECC5EA004CBAA8 /* ReactiveObject.swift */; };
+		CFA828C928ECDC18004CBAA8 /* Deinitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828C828ECDC18004CBAA8 /* Deinitable.swift */; };
+		CFA828CC28ECDD6F004CBAA8 /* ActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828CB28ECDD6F004CBAA8 /* ActionHandler.swift */; };
+		CFA828CE28ECDDE9004CBAA8 /* Resettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828CD28ECDDE9004CBAA8 /* Resettable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +37,6 @@
 		CF57991028E8C68100472712 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		CF57991428E8C91A00472712 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		CF57991628E8CB0300472712 /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
-		CF57991B28E8FF0900472712 /* ValuePublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuePublisher.swift; sourceTree = "<group>"; };
 		CF6D742C28E9C27300255508 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		CFA828AE28E9DD5C004CBAA8 /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
 		CFA828B228E9E78B004CBAA8 /* ActionPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPublisher.swift; sourceTree = "<group>"; };
@@ -43,6 +45,10 @@
 		CFA828B828EA4221004CBAA8 /* ViewModelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProvider.swift; sourceTree = "<group>"; };
 		CFA828BA28EA49AE004CBAA8 /* TimerAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAction.swift; sourceTree = "<group>"; };
 		CFA828BD28EA49EE004CBAA8 /* LogAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogAction.swift; sourceTree = "<group>"; };
+		CFA828C428ECC5EA004CBAA8 /* ReactiveObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveObject.swift; sourceTree = "<group>"; };
+		CFA828C828ECDC18004CBAA8 /* Deinitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deinitable.swift; sourceTree = "<group>"; };
+		CFA828CB28ECDD6F004CBAA8 /* ActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionHandler.swift; sourceTree = "<group>"; };
+		CFA828CD28ECDDE9004CBAA8 /* Resettable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resettable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +82,12 @@
 			isa = PBXGroup;
 			children = (
 				CF57990228E8C56C00472712 /* genericPublishedPropertyExperimentApp.swift */,
-				CF57990428E8C56C00472712 /* ContentView.swift */,
-				CFA828B428E9EB26004CBAA8 /* TimerView.swift */,
-				CFA828AD28E9DC20004CBAA8 /* ViewModels */,
+				CFA828AE28E9DD5C004CBAA8 /* AppAction.swift */,
+				CFA828C428ECC5EA004CBAA8 /* ReactiveObject.swift */,
+				CFA828CA28ECDC47004CBAA8 /* Protocols */,
+				CFA828AD28E9DC20004CBAA8 /* ViewModel */,
 				CFA828AC28E9DBFB004CBAA8 /* Services */,
+				CFA828C128ECC019004CBAA8 /* Views */,
 				CF57990628E8C56F00472712 /* Assets.xcassets */,
 				CF57990828E8C56F00472712 /* Preview Content */,
 			);
@@ -97,7 +105,6 @@
 		CFA828AC28E9DBFB004CBAA8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				CF57991B28E8FF0900472712 /* ValuePublisher.swift */,
 				CF6D742C28E9C27300255508 /* Service.swift */,
 				CFA828C028EA4A16004CBAA8 /* Navigation Service */,
 				CFA828BC28EA49BD004CBAA8 /* Timer Service */,
@@ -106,16 +113,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		CFA828AD28E9DC20004CBAA8 /* ViewModels */ = {
+		CFA828AD28E9DC20004CBAA8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				CFA828AE28E9DD5C004CBAA8 /* AppAction.swift */,
-				CFA828B228E9E78B004CBAA8 /* ActionPublisher.swift */,
+				CFA828B828EA4221004CBAA8 /* ViewModelProvider.swift */,
 				CF57991028E8C68100472712 /* ViewModel.swift */,
 				CF57991428E8C91A00472712 /* TimerViewModel.swift */,
-				CFA828B828EA4221004CBAA8 /* ViewModelProvider.swift */,
 			);
-			path = ViewModels;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		CFA828BC28EA49BD004CBAA8 /* Timer Service */ = {
@@ -141,6 +146,26 @@
 			children = (
 			);
 			path = "Navigation Service";
+			sourceTree = "<group>";
+		};
+		CFA828C128ECC019004CBAA8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CF57990428E8C56C00472712 /* ContentView.swift */,
+				CFA828B428E9EB26004CBAA8 /* TimerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CFA828CA28ECDC47004CBAA8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CFA828C828ECDC18004CBAA8 /* Deinitable.swift */,
+				CFA828CD28ECDDE9004CBAA8 /* Resettable.swift */,
+				CFA828CB28ECDD6F004CBAA8 /* ActionHandler.swift */,
+				CFA828B228E9E78B004CBAA8 /* ActionPublisher.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,13 +245,16 @@
 				CFA828BE28EA49EE004CBAA8 /* LogAction.swift in Sources */,
 				CF57991528E8C91A00472712 /* TimerViewModel.swift in Sources */,
 				CF6D742D28E9C27300255508 /* Service.swift in Sources */,
+				CFA828CE28ECDDE9004CBAA8 /* Resettable.swift in Sources */,
 				CFA828BB28EA49AE004CBAA8 /* TimerAction.swift in Sources */,
 				CF57990528E8C56C00472712 /* ContentView.swift in Sources */,
-				CF57991C28E8FF0900472712 /* ValuePublisher.swift in Sources */,
 				CF57991128E8C68100472712 /* ViewModel.swift in Sources */,
+				CFA828C528ECC5EA004CBAA8 /* ReactiveObject.swift in Sources */,
 				CFA828B328E9E78B004CBAA8 /* ActionPublisher.swift in Sources */,
 				CF57991728E8CB0300472712 /* TimerService.swift in Sources */,
 				CF57990328E8C56C00472712 /* genericPublishedPropertyExperimentApp.swift in Sources */,
+				CFA828CC28ECDD6F004CBAA8 /* ActionHandler.swift in Sources */,
+				CFA828C928ECDC18004CBAA8 /* Deinitable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

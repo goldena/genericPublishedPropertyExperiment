@@ -5,19 +5,15 @@
 //  Created by Denis Goloborodko on 2.10.22.
 //
 
-import Foundation
-
-final class LogService: Service<String?> {
+final class LogService: Service {
         
-    // MARK: - Reset Service
-
-    override func onDeinit() {
-        super.onDeinit()
-    }
-
-    // MARK: - handle
+    // MARK: - AppActionHandler protocol
     
-    override func handle(action: AppAction) {
+    override func handle(action: AppAction?) {
+        guard let action else {
+            return
+        }
+        
         guard case .log(let logAction) = action else {
             print("\(self) cannot handle \(action)")
             return
@@ -25,7 +21,7 @@ final class LogService: Service<String?> {
         
         switch logAction {
         case .message(let message):
-            publish(value: message)
+            publish(action: .log(.message(message)))
         }
     }
     

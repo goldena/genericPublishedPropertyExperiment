@@ -7,11 +7,10 @@
 
 import Foundation
 
-protocol ActionPublisher: ViewModel {
+protocol ActionPublisher: AnyObject {
 
     var action: AppAction? { get }
-    var actionPublisher: Published<AppAction?>.Publisher { get }
 
-    func publish(action: AppAction)
+    func publish(action: AppAction?)
     
 }

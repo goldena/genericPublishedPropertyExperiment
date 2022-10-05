@@ -7,23 +7,26 @@
 
 import Foundation
 
-final class TimerService: Service<Int?> {
-        
+final class TimerService: Service {
+    
     // MARK: - Properties
-
+    
     private var timer: Timer?
-
-    // MARK: - Reset Service
-
+    
+    private var seconds = 0
+    
+    // MARK: - Deinitable Protocol
+    
     override func onDeinit() {
         stop()
         
         super.onDeinit()
     }
-
-    override func handle(action: AppAction) {        
+    
+    // MARK: - AppActionHandler protocol
+    
+    override func handle(action: AppAction?) {
         guard case .timer(let timerAction) = action else {
-            print("\(self) cannot handle \(action)")
             return
         }
         
@@ -36,50 +39,47 @@ final class TimerService: Service<Int?> {
             
         case .stop:
             stop()
+            
+        default:
+            return
         }
     }
     
-}
-
-// MARK: - TimerService protocol
-
-extension TimerService {
-
+    // MARK: - Private functions
+    
     private func set(seconds: Int) {
         assert(seconds > 0, "Trying to set timer on zero or negative value")
-
-        publish(value: seconds)
+        
+        self.seconds = seconds
     }
-
+    
     private func start() {
         guard timer == nil else {
             print("Timer already started")
             return
         }
-
+        
         timer = Timer.scheduledTimer(
             withTimeInterval: 1.0,
-            repeats: true,
-            block: { [weak self] _ in
-                guard let self else {
-                    print("No self in Timer.scheduleTimer() of TimerService")
-                    return
-                }
-
-                if let value = self.value {
-                    if value > 0 {
-                        self.publish(value: value - 1)
-                    } else {
-                        self.stop()
-                    }
-                }
+            repeats: true
+        ) { [weak self] _ in
+            guard let self else {
+                print("No self in Timer.scheduleTimer() of TimerService")
+                return
             }
-        )
+            
+            if self.seconds > 0 {
+                self.seconds -= 1
+                self.publish(action: .timer(.value(seconds: self.seconds)))
+            } else {
+                self.stop()
+            }
+        }
     }
-
+    
     private func stop() {
         timer?.invalidate()
         timer = nil
     }
-
+    
 }

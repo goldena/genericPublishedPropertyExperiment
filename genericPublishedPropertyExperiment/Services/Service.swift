@@ -7,18 +7,18 @@
 
 import Foundation
 
-class Service: ReactiveObject {
+class Service: ReactiveObject, Resettable {
 
+    // MARK: - Init
+    
     init() {
         super.init(shouldReceiveValuesOn: .main)
     }
 
-}
-
-extension Service: Resettable {
+    // MARK: - Resettable protocol
     
     func onReset() {
         print("--> onReset was not overridden in \(self)")
     }
-    
+
 }

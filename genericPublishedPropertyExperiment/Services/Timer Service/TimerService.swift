@@ -8,12 +8,16 @@
 import Foundation
 
 final class TimerService: Service {
-    
+
     // MARK: - Properties
     
     private var timer: Timer?
     
-    private var seconds = 0
+    private var seconds = 0 {
+        didSet {
+            publish(action: .timer(.value(seconds: seconds)))
+        }
+    }
     
     // MARK: - Deinitable Protocol
     
@@ -21,6 +25,12 @@ final class TimerService: Service {
         stop()
         
         super.onDeinit()
+    }
+    
+    // MARK: - Resettable Protocol
+    
+    override func onReset() {
+        stop()
     }
     
     // MARK: - AppActionHandler protocol
@@ -70,7 +80,6 @@ final class TimerService: Service {
             
             if self.seconds > 0 {
                 self.seconds -= 1
-                self.publish(action: .timer(.value(seconds: self.seconds)))
             } else {
                 self.stop()
             }

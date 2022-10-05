@@ -15,18 +15,12 @@ final class TimerService: Service {
     
     private var seconds = 0 {
         didSet {
-            publish(action: .timer(.value(seconds: seconds)))
+            publish(
+                data: .timer(.value(seconds))
+            )
         }
     }
-    
-    // MARK: - Deinitable Protocol
-    
-    override func onDeinit() {
-        stop()
         
-        super.onDeinit()
-    }
-    
     // MARK: - Resettable Protocol
     
     override func onReset() {
@@ -36,19 +30,22 @@ final class TimerService: Service {
     // MARK: - AppActionHandler protocol
     
     override func handle(action: AppAction?) {
-        guard case .timer(let timerAction) = action else {
+        guard let action else {
             return
         }
         
-        switch timerAction {
-        case .set(let seconds):
-            set(seconds: seconds)
-            
-        case .start:
-            start()
-            
-        case .stop:
-            stop()
+        switch action {
+        case .timer(let timerAction):
+            switch timerAction {
+            case .set(let seconds):
+                set(seconds: seconds)
+                
+            case .start:
+                start()
+                
+            case .stop:
+                stop()
+            }
             
         default:
             return

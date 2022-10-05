@@ -8,7 +8,5 @@
 enum TimerAction {
     case set(seconds: Int)
     case start
-    case stop
-     
-    case value(seconds: Int)
+    case stop     
 }

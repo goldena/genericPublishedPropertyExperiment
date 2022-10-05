@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CF57990328E8C56C00472712 /* genericPublishedPropertyExperimentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF57990228E8C56C00472712 /* genericPublishedPropertyExperimentApp.swift */; };
+		CF57990328E8C56C00472712 /* ExperimentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF57990228E8C56C00472712 /* ExperimentApp.swift */; };
 		CF57990528E8C56C00472712 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF57990428E8C56C00472712 /* ContentView.swift */; };
 		CF57990728E8C56F00472712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF57990628E8C56F00472712 /* Assets.xcassets */; };
 		CF57990A28E8C56F00472712 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF57990928E8C56F00472712 /* Preview Assets.xcassets */; };
@@ -22,15 +22,19 @@
 		CFA828B928EA4221004CBAA8 /* ViewModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828B828EA4221004CBAA8 /* ViewModelProvider.swift */; };
 		CFA828BB28EA49AE004CBAA8 /* TimerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828BA28EA49AE004CBAA8 /* TimerAction.swift */; };
 		CFA828BE28EA49EE004CBAA8 /* LogAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828BD28EA49EE004CBAA8 /* LogAction.swift */; };
-		CFA828C528ECC5EA004CBAA8 /* ReactiveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828C428ECC5EA004CBAA8 /* ReactiveObject.swift */; };
 		CFA828C928ECDC18004CBAA8 /* Deinitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828C828ECDC18004CBAA8 /* Deinitable.swift */; };
 		CFA828CC28ECDD6F004CBAA8 /* ActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828CB28ECDD6F004CBAA8 /* ActionHandler.swift */; };
 		CFA828CE28ECDDE9004CBAA8 /* Resettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828CD28ECDDE9004CBAA8 /* Resettable.swift */; };
+		CFA828D028EE251D004CBAA8 /* TimerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828CF28EE251D004CBAA8 /* TimerData.swift */; };
+		CFA828D228EE2593004CBAA8 /* AddData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828D128EE2593004CBAA8 /* AddData.swift */; };
+		CFA828D428EE25C3004CBAA8 /* LogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828D328EE25C3004CBAA8 /* LogData.swift */; };
+		CFA828D628EE290A004CBAA8 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828D528EE290A004CBAA8 /* DataHandler.swift */; };
+		CFA828D828EE2943004CBAA8 /* DataPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA828D728EE2943004CBAA8 /* DataPublisher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CF5798FF28E8C56C00472712 /* genericPublishedPropertyExperiment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = genericPublishedPropertyExperiment.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF57990228E8C56C00472712 /* genericPublishedPropertyExperimentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = genericPublishedPropertyExperimentApp.swift; sourceTree = "<group>"; };
+		CF57990228E8C56C00472712 /* ExperimentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentApp.swift; sourceTree = "<group>"; };
 		CF57990428E8C56C00472712 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CF57990628E8C56F00472712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF57990928E8C56F00472712 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -45,10 +49,14 @@
 		CFA828B828EA4221004CBAA8 /* ViewModelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProvider.swift; sourceTree = "<group>"; };
 		CFA828BA28EA49AE004CBAA8 /* TimerAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAction.swift; sourceTree = "<group>"; };
 		CFA828BD28EA49EE004CBAA8 /* LogAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogAction.swift; sourceTree = "<group>"; };
-		CFA828C428ECC5EA004CBAA8 /* ReactiveObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveObject.swift; sourceTree = "<group>"; };
 		CFA828C828ECDC18004CBAA8 /* Deinitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deinitable.swift; sourceTree = "<group>"; };
 		CFA828CB28ECDD6F004CBAA8 /* ActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionHandler.swift; sourceTree = "<group>"; };
 		CFA828CD28ECDDE9004CBAA8 /* Resettable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resettable.swift; sourceTree = "<group>"; };
+		CFA828CF28EE251D004CBAA8 /* TimerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerData.swift; sourceTree = "<group>"; };
+		CFA828D128EE2593004CBAA8 /* AddData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddData.swift; sourceTree = "<group>"; };
+		CFA828D328EE25C3004CBAA8 /* LogData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogData.swift; sourceTree = "<group>"; };
+		CFA828D528EE290A004CBAA8 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
+		CFA828D728EE2943004CBAA8 /* DataPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPublisher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +89,9 @@
 		CF57990128E8C56C00472712 /* genericPublishedPropertyExperiment */ = {
 			isa = PBXGroup;
 			children = (
-				CF57990228E8C56C00472712 /* genericPublishedPropertyExperimentApp.swift */,
+				CF57990228E8C56C00472712 /* ExperimentApp.swift */,
 				CFA828AE28E9DD5C004CBAA8 /* AppAction.swift */,
-				CFA828C428ECC5EA004CBAA8 /* ReactiveObject.swift */,
+				CFA828D128EE2593004CBAA8 /* AddData.swift */,
 				CFA828CA28ECDC47004CBAA8 /* Protocols */,
 				CFA828AD28E9DC20004CBAA8 /* ViewModel */,
 				CFA828AC28E9DBFB004CBAA8 /* Services */,
@@ -127,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				CFA828BA28EA49AE004CBAA8 /* TimerAction.swift */,
+				CFA828CF28EE251D004CBAA8 /* TimerData.swift */,
 				CF57991628E8CB0300472712 /* TimerService.swift */,
 			);
 			path = "Timer Service";
@@ -136,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				CFA828BD28EA49EE004CBAA8 /* LogAction.swift */,
+				CFA828D328EE25C3004CBAA8 /* LogData.swift */,
 				CFA828B628EA30AF004CBAA8 /* LogService.swift */,
 			);
 			path = "Log Service";
@@ -163,7 +173,9 @@
 				CFA828C828ECDC18004CBAA8 /* Deinitable.swift */,
 				CFA828CD28ECDDE9004CBAA8 /* Resettable.swift */,
 				CFA828CB28ECDD6F004CBAA8 /* ActionHandler.swift */,
+				CFA828D528EE290A004CBAA8 /* DataHandler.swift */,
 				CFA828B228E9E78B004CBAA8 /* ActionPublisher.swift */,
+				CFA828D728EE2943004CBAA8 /* DataPublisher.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -239,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFA828B528E9EB26004CBAA8 /* TimerView.swift in Sources */,
+				CFA828D628EE290A004CBAA8 /* DataHandler.swift in Sources */,
 				CFA828B928EA4221004CBAA8 /* ViewModelProvider.swift in Sources */,
 				CFA828B728EA30AF004CBAA8 /* LogService.swift in Sources */,
 				CFA828AF28E9DD5C004CBAA8 /* AppAction.swift in Sources */,
@@ -246,15 +259,18 @@
 				CF57991528E8C91A00472712 /* TimerViewModel.swift in Sources */,
 				CF6D742D28E9C27300255508 /* Service.swift in Sources */,
 				CFA828CE28ECDDE9004CBAA8 /* Resettable.swift in Sources */,
+				CFA828D428EE25C3004CBAA8 /* LogData.swift in Sources */,
+				CFA828D828EE2943004CBAA8 /* DataPublisher.swift in Sources */,
 				CFA828BB28EA49AE004CBAA8 /* TimerAction.swift in Sources */,
 				CF57990528E8C56C00472712 /* ContentView.swift in Sources */,
 				CF57991128E8C68100472712 /* ViewModel.swift in Sources */,
-				CFA828C528ECC5EA004CBAA8 /* ReactiveObject.swift in Sources */,
 				CFA828B328E9E78B004CBAA8 /* ActionPublisher.swift in Sources */,
 				CF57991728E8CB0300472712 /* TimerService.swift in Sources */,
-				CF57990328E8C56C00472712 /* genericPublishedPropertyExperimentApp.swift in Sources */,
+				CF57990328E8C56C00472712 /* ExperimentApp.swift in Sources */,
+				CFA828D228EE2593004CBAA8 /* AddData.swift in Sources */,
 				CFA828CC28ECDD6F004CBAA8 /* ActionHandler.swift in Sources */,
 				CFA828C928ECDC18004CBAA8 /* Deinitable.swift in Sources */,
+				CFA828D028EE251D004CBAA8 /* TimerData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

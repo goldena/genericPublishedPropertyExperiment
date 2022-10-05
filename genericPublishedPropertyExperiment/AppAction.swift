@@ -6,6 +6,6 @@
 //
 
 enum AppAction {
-    case timer(TimerAction)
+    case timer(TimerAction)    
     case log(LogAction)
 }

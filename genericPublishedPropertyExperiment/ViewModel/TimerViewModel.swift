@@ -11,18 +11,24 @@ final class TimerViewModel: ViewModel {
 
     @Published var seconds: Int?
     @Published var message: String?
-        
-    override func handle(action: AppAction?) {
-        guard let action else {
+
+    override func handle(data: AppData?) {
+        guard let data else {
             return
         }
         
-        if case .timer(.value(let seconds)) = action {
-            self.seconds = seconds
-        }
-        
-        if case .log(.message(let message)) = action {
-            self.message = message
+        switch data {
+        case .timer(let timerData):
+            switch timerData {
+            case .value(let seconds):
+                self.seconds = seconds
+            }
+            
+        case .log(let logData):
+            switch logData {
+            case .message(let message):
+                self.message = message
+            }
         }
     }
     

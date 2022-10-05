@@ -29,8 +29,8 @@ struct TimerView: View {
             
             Group {
                 Button("Log") {
-                    viewModel.publish(action: .log(
-                        .message(UUID().uuidString))
+                    viewModel.publish(
+                        action: .log(.message(UUID().uuidString))
                     )
                 }
                 

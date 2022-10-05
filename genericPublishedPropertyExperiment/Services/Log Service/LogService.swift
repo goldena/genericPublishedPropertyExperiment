@@ -14,14 +14,15 @@ final class LogService: Service {
             return
         }
         
-        guard case .log(let logAction) = action else {
-            print("\(self) cannot handle \(action)")
+        switch action {
+        case .log(let logData):
+            switch logData {
+            case .message(let string):
+                publish(data: .log(.message(string)))
+            }
+            
+        default:
             return
-        }        
-        
-        switch logAction {
-        case .message(let message):
-            publish(action: .log(.message(message)))
         }
     }
     
